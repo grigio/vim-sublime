@@ -23,10 +23,8 @@ The shortcuts should work in vim (terminal) on Linux, Mac OS X and Windows (I'm 
 - `ctrl` + `c` - Copy
 - `ctrl` + `x` - Cut
 - `ctrl` + `p` - Paste
-
 - `ctrl` + `m` - Comment / Decomment
 - `ctrl` + `w` + `<tag>` - <tag>Wrap text</tag>
-
 - `⇥ Tab` - Comment text
 - `⇥ Tab` + `⇧` - Decomment text
 

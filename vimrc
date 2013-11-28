@@ -1,12 +1,7 @@
 " vim-sublime - A minimal Sublime Text -like vim experience bundle
 "               http://github.com/grigio/vim-sublime
 
-if &t_Co != 256 && ! has("gui_running")
-  echomsg ""
-  echomsg "err: please use GUI or a 256-color terminal (so that t_Co=256 could be set)"
-  echomsg ""
-  finish
-endif
+# NB: You need a terminal with 256 colors support
 
 set nocompatible              " be iMproved
 filetype off                  " required!

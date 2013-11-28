@@ -1,7 +1,7 @@
 " vim-sublime - A minimal Sublime Text -like vim experience bundle
 "               http://github.com/grigio/vim-sublime
 
-# NB: You need a terminal with 256 colors support
+" NB: You need a terminal with 256 colors support
 
 set nocompatible              " be iMproved
 filetype off                  " required!

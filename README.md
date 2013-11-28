@@ -51,6 +51,8 @@ Then open `vim` and run
 
 `:BundleInstall`
 
+(Don't worry about the 'Monokai' error), quit and enter in `vim` again to apply the changes
+
 ## Author
 
 Luigi Maselli - http://grigio.org

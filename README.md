@@ -9,7 +9,7 @@ A ready to use minimal Vim (Sublime Text -like) .vimrc configuration
 
 *vim-sublime* includes [Vundle](https://github.com/gmarik/vundle) package manager and some external plugins.
 
-The shortcuts should work in vim (terminal) on Linux, Mac OS X and Windows (I'm joking, I don't know).
+The shortcuts should work in vim (terminal with 256 colors) on Linux, Mac OS X and Windows (I'm joking, I don't know).
 
 *Everywhere*
 

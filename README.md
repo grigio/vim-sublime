@@ -2,10 +2,10 @@
 
 A ready to use minimal Vim (Sublime Text -like) .vimrc configuration
 
-![](vim-sublime.png)
+![](vim-sublime.gif)
 
 <p align="center">
- ( <a href="https://github.com/grigio/vim-sublime/raw/master/vim-sublime.m4v">Play Video</a> )
+ ( <a href="https://github.com/grigio/vim-sublime/raw/master/vim-sublime.gif">Play Video</a> )
 </p>
 
 ## Features included and Shortcuts

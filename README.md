@@ -28,9 +28,15 @@ The shortcuts should work in vim (terminal with 256 colors) on Linux, Mac OS X a
 - `ctrl` + `x` - Cut
 - `ctrl` + `p` - Paste
 - `ctrl` + `m` - Comment / Decomment
+<<<<<<< HEAD
 - `ctrl` + `w` + `<tag>` - <tag>Wrap text</tag>
 - `⇥ Tab` - Indent text
 - `⇥ Tab` + `⇧` - Indent text
+=======
+- `ctrl` + `w` + `<tag>` - <tag>Wrap text `</tag>`
+- `⇥ Tab` - Comment text
+- `⇥ Tab` + `⇧` - Decomment text
+>>>>>>> 5080d990d55349c511bd4edeee82bb0db76f2527
 
 *Tabs*
 

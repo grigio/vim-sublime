@@ -20,6 +20,7 @@ The shortcuts should work in vim (terminal with 256 colors) on Linux, Mac OS X a
 - `ctrl` + `f` - Find text in the document
 - `ctrl` + `z` - Cancel
 - `ctrl` + `y` - Redo
+- `F1`         - Snippets
 
 *Selection* - after (`esc` + `v`) or (`⇧`+ `v`)
 
@@ -28,8 +29,8 @@ The shortcuts should work in vim (terminal with 256 colors) on Linux, Mac OS X a
 - `ctrl` + `p` - Paste
 - `ctrl` + `m` - Comment / Decomment
 - `ctrl` + `w` + `<tag>` - <tag>Wrap text</tag>
-- `⇥ Tab` - Comment text
-- `⇥ Tab` + `⇧` - Decomment text
+- `⇥ Tab` - Indent text
+- `⇥ Tab` + `⇧` - Indent text
 
 *Tabs*
 
@@ -47,8 +48,6 @@ Install Vundle
 
 Install *vim-sublime* `.vimrc`
 
-`touch .vim/{packages.vim,shortcuts.vim}`
-
 `curl https://raw.github.com/grigio/vim-sublime/master/vimrc > $HOME/.vimrc`
 
 Then open `vim` and run
@@ -57,8 +56,11 @@ Then open `vim` and run
 
 (Don't worry about the 'Monokai' error), quit and enter in `vim` again to apply the changes
 
+You can also add machine specific config to `~/.local.vim`
+
 ## Author
 
 Luigi Maselli - http://grigio.org
-Some configs are from [subvim](https://github.com/fatih/subvim) another Sublime Text for VIM project
+
+If You use Macvim see also [subvim](https://github.com/fatih/subvim), another Sublime Text for VIM project
 

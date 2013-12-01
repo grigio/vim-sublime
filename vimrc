@@ -1,66 +1,115 @@
 " vim-sublime - A minimal Sublime Text -like vim experience bundle
 "               http://github.com/grigio/vim-sublime
+" Best view with a 256 color terminal and Powerline fonts
 
-" NB: You need a terminal with 256 colors support
-
-set nocompatible              " be iMproved
-filetype off                  " required!
-
+set nocompatible
+filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-
-" let Vundle manage Vundle
-" required!
 Bundle 'gmarik/vundle'
-filetype plugin indent on     " required!
 
-"
-" vim-sublime basic bundles here:
-"
-Bundle 'L9'
 Bundle 'tpope/vim-surround'
-Bundle 'tomtom/tcomment_vim'
 Bundle 'gcmt/breeze.vim'
-Bundle 'bling/vim-airline'
-"Bundle 'Raimondi/delimitMate'
 Bundle 'kien/ctrlp.vim'
+Bundle 'SirVer/ultisnips'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'bling/vim-airline'
+Bundle 'airblade/vim-gitgutter'
 
 " Color Themes
 Bundle 'flazz/vim-colorschemes'
-
-" My settings
 colorscheme Monokai
-set paste
-syntax on
 
-set noerrorbells                " No beeps
-set number                      " Show line numbers
-set backspace=indent,eol,start  " Makes backspace key more powerful.
-set showcmd                     " Show me what I'm typing
-set showmode                    " Show current mode.
+""""""""
+if has('autocmd')
+  filetype plugin indent on
+endif
+if has('syntax') && !exists('g:syntax_on')
+  syntax enable
+endif
 
-set noswapfile                  " Don't use swapfile
-set nobackup                    " Don't create annoying backup files
-set splitright                  " Split vertical windows right to the current windows
-set splitbelow                  " Split horizontal windows below to the current windows
-set encoding=utf-8              " Set default encoding to UTF-8
-set autowrite                   " Automatically save before :next, :make etc.
-set autoread                    " Automatically reread changed files without asking me anything
+" Use :help 'option' to see the documentation for the given option.
+set autoindent
+set backspace=indent,eol,start
+set complete-=i
+set showmatch
+set showmode
+set smarttab
+
+set nrformats-=octal
+set shiftround
+
+set ttimeout
+set ttimeoutlen=50
+
+set incsearch
+" Use <C-L> to clear the highlighting of :set hlsearch.
+if maparg('<C-L>', 'n') ==# ''
+  nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
+endif
+
 set laststatus=2
+set ruler
+set showcmd
+set wildmenu
 
-set fileformats=unix,dos,mac    " Prefer Unix over Windows over OS 9 formats
+set autoread
 
-set showmatch                   " Do not show matching brackets by flickering
-set incsearch                   " Shows the match while typing
-set hlsearch                    " Highlight found searches
-set ignorecase                  " Search case insensitive...
-set smartcase                   " ... but not when search pattern contains upper case characters
-
-set switchbuf=usetab,newtab     " open new buffers always in new tabs
-
+set encoding=utf-8
 set tabstop=2 shiftwidth=2 expandtab
 set listchars=tab:▒░,trail:▓
 set list
+
+inoremap <C-U> <C-G>u<C-U>
+
+set number
+set hlsearch
+set ignorecase
+set smartcase
+
+" Don't use Ex mode, use Q for formatting
+map Q gq
+
+" In many terminal emulators the mouse works just fine, thus enable it.
+if has('mouse')
+  set mouse=a
+endif
+
+" do not history when leavy buffer
+set hidden
+
+" FIXME: (broken) ctrl s to save
+noremap  <C-S> :update<CR>
+vnoremap <C-S> <C-C>:update<CR>
+inoremap <C-S> <Esc>:update<CR>
+
+set nobackup
+set nowritebackup
+set noswapfile
+set fileformats=unix,dos,mac
+
+" exit insert mode 
+inoremap <C-c> <Esc>
+
+set completeopt=menuone,longest,preview
+
+"
+" Plugins config
+"
+
+" CtrlP
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/* 
+
+" Ultisnip
+" NOTE: <f1> otherwise it overrides <tab> forever
+let g:UltiSnipsExpandTrigger="<f1>"
+let g:UltiSnipsJumpForwardTrigger="<f1>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:did_UltiSnips_vim_after = 1
+
+" vim-airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
 "
 " Basic shortcuts definitions
@@ -70,8 +119,8 @@ set list
 " Find
 map <C-f> /
 " indend / deindent after selecting the text with (⇧ v), (.) to repeat.
-vmap <Tab> >
-vmap <S-Tab> <
+vnoremap <Tab> >
+vnoremap <S-Tab> <
 " comment / decomment & normal comment behavior
 vmap <C-m> gc
 " Disable tComment to escape some entities
@@ -98,10 +147,16 @@ nnoremap <C-t>  :tabnew<CR>
 inoremap <C-t>  <Esc>:tabnew<CR>i
 nnoremap <C-k>  :tabclose<CR>
 inoremap <C-k>  <Esc>:tabclose<CR>i
-"
-" Your overrides
-"
-if isdirectory(expand("$HOME/.vim/"))
-  source $HOME/.vim/packages.vim
-  source $HOME/.vim/shortcuts.vim
+
+" lazy ':'
+map \ :
+
+let mapleader = ','
+nnoremap <Leader>p :set paste<CR>
+nnoremap <Leader>o :set nopaste<CR>
+noremap  <Leader>g :GitGutterToggle<CR>
+
+" this machine config
+if filereadable(expand("~/.vimrc.local"))
+  source ~/.vimrc.local
 endif

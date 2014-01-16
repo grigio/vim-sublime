@@ -32,6 +32,12 @@ The shortcuts should work in vim (terminal with 256 colors) on Linux, Mac OS X a
 - `⇥ Tab` - Indent text
 - `⇥ Tab` + `⇧` - Indent text
 
+An alternative way to comment is `ctrl` + `v` (Visual-block mode)
+then `⇧`I`, add the commenting characters (es. //) and press `esc`.
+
+To decomment, `ctrl` + `v`, select the part you want to delete at the beginning
+of the line and press `d`.
+
 *Tabs*
 
 - `ctrl` + `t` - New tab

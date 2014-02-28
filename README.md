@@ -64,6 +64,8 @@ Then open `vim` and run
 
 You can also add machine specific config to `~/.local.vim`
 
+**Note**: to have the correct font in the bottom bar you need a [Powerline](https://github.com/Lokaltog/powerline-fonts) font installed and selected in the terminal.
+
 ## Author
 
 Luigi Maselli - http://grigio.org

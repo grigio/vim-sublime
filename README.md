@@ -54,7 +54,7 @@ Install Vundle
 
 Install *vim-sublime* `.vimrc`
 
-`curl https://raw.github.com/grigio/vim-sublime/master/vimrc > $HOME/.vimrc`
+`curl https://raw.githubusercontent.com/grigio/vim-sublime/master/vimrc > $HOME/.vimrc`
 
 Then open `vim` and run
 
@@ -63,6 +63,8 @@ Then open `vim` and run
 (Don't worry about the 'Monokai' error), quit and enter in `vim` again to apply the changes
 
 You can also add machine specific config to `~/.local.vim`
+
+For best results make sure your $TERM env variable is 256 colours; `export TERM=xterm-256color`
 
 **Note**: to have the correct font in the bottom bar you need a [Powerline](https://github.com/Lokaltog/powerline-fonts) font installed and selected in the terminal.
 

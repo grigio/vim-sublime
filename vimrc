@@ -1,24 +1,32 @@
-" vim-sublime - A minimal Sublime Text -like vim experience bundle
+" vim-sublime - A minimal Sublime Text - like vim experience bundle
 "               http://github.com/grigio/vim-sublime
 " Best view with a 256 color terminal and Powerline fonts
+" Updated by Dorian Neto (https://github.com/dorianneto)"
 
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
 
-Bundle 'tpope/vim-surround'
-Bundle 'gcmt/breeze.vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'SirVer/ultisnips'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'bling/vim-airline'
-Bundle 'airblade/vim-gitgutter'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+
+" ------Plugins-------
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-surround'
+Plugin 'gcmt/breeze.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'airblade/vim-gitgutter'
 
 " Color Themes
-Bundle 'flazz/vim-colorschemes'
+Plugin 'flazz/vim-colorschemes'
 colorscheme Monokai
+
+call vundle#end()
+filetype plugin indent on
 
 """"""""
 if has('autocmd')
@@ -88,7 +96,7 @@ set nowritebackup
 set noswapfile
 set fileformats=unix,dos,mac
 
-" exit insert mode 
+" exit insert mode
 inoremap <C-c> <Esc>
 
 set completeopt=menuone,longest,preview
@@ -97,8 +105,11 @@ set completeopt=menuone,longest,preview
 " Plugins config
 "
 
+" NERDTree
+nnoremap <S-n> :NERDTreeToggle<CR>
+
 " CtrlP
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/* 
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 
 " Ultisnip
 " NOTE: <f1> otherwise it overrides <tab> forever

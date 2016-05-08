@@ -24,9 +24,9 @@ Plugin 'Valloric/YouCompleteMe'
 
 " Color Themes
 Plugin 'flazz/vim-colorschemes'
-colorscheme Monokai
 
 call vundle#end()
+colorscheme Monokai
 filetype plugin indent on
 
 """"""""

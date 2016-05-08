@@ -23,9 +23,9 @@ Plugin 'airblade/vim-gitgutter'
 
 " Color Themes
 Plugin 'flazz/vim-colorschemes'
-colorscheme Monokai
 
 call vundle#end()
+colorscheme Monokai
 filetype plugin indent on
 
 """"""""

@@ -34,7 +34,7 @@ Add the plugin colors
 
 `$ rm -rf vim-colorschemes`
 
-(Don't worry about the 'Monokai' error), quit and enter in `vim` again to apply the changes
+Quit and enter in `vim` again to apply the changes
 
 You can also add machine specific config to `~/.local.vim`
 

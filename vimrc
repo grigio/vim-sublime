@@ -24,7 +24,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'davidhalter/jedi-vim'
 
 " Color Themes
-Plugin 'flazz/vim-colorschemes'
+Plugin 'colors'
 
 call vundle#end()
 colorscheme Monokai

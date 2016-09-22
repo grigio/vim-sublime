@@ -20,6 +20,14 @@ Install *vim-sublime* `.vimrc`
 
 `$ curl https://raw.githubusercontent.com/grigio/vim-sublime/master/vimrc > $HOME/.vimrc`
 
+`$ cd`
+
+`$ git clone https://github.com/flazz/vim-colorschemes`
+
+`$  mv vim-colorschemes/colors/ .vim`
+
+`$ rm -rf vim-colorschemes`
+
 Then open `vim` and run
 
 `:PluginInstall`

@@ -20,6 +20,12 @@ Install *vim-sublime* `.vimrc`
 
 `$ curl https://raw.githubusercontent.com/grigio/vim-sublime/master/vimrc > $HOME/.vimrc`
 
+Then open `vim` and run
+
+`:PluginInstall`
+
+Add the plugin colors
+
 `$ cd`
 
 `$ git clone https://github.com/flazz/vim-colorschemes`
@@ -27,10 +33,6 @@ Install *vim-sublime* `.vimrc`
 `$  mv vim-colorschemes/colors/ .vim`
 
 `$ rm -rf vim-colorschemes`
-
-Then open `vim` and run
-
-`:PluginInstall`
 
 (Don't worry about the 'Monokai' error), quit and enter in `vim` again to apply the changes
 

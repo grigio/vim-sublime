@@ -131,7 +131,7 @@ let g:airline_powerline_fonts = 1
 
 " Find
 map <C-f> /
-" indend / deindent after selecting the text with (⇧ v), (.) to repeat.
+" indent / deindent after selecting the text with (⇧ v), (.) to repeat.
 vnoremap <Tab> >
 vnoremap <S-Tab> <
 " comment / decomment & normal comment behavior

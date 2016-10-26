@@ -24,7 +24,17 @@ Then open `vim` and run
 
 `:PluginInstall`
 
-(Don't worry about the 'Monokai' error), quit and enter in `vim` again to apply the changes
+Add the plugin colors
+
+`$ cd`
+
+`$ git clone https://github.com/flazz/vim-colorschemes`
+
+`$  mv vim-colorschemes/colors/ .vim`
+
+`$ rm -rf vim-colorschemes`
+
+Quit and enter in `vim` again to apply the changes
 
 You can also add machine specific config to `~/.local.vim`
 
